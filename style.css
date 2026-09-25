@@ -1,0 +1,125 @@
+:root {
+    --bg: #f4f0e6;
+    --surface: #fffdf8;
+    --ink: #1c1915;
+    --muted: #3f4a44;
+    --line: #e2d9cc;
+    --accent: #0f5c4c;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.skip {
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    transform: translateY(-120%);
+    background: var(--surface);
+    padding: 0.25rem 0.5rem;
+}
+
+.skip:focus {
+    transform: none;
+}
+
+.column {
+    width: 100%;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem 1rem;
+    padding-block: 1.25rem;
+}
+
+.site-name {
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+}
+
+h1 {
+    margin: 0.5rem 0 0;
+}
+
+.role {
+    margin: 0.35rem 0 1rem;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+article {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+
+article h3,
+section h2 {
+    margin-top: 0;
+}
+
+ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+footer {
+    padding-block: 2rem 2.5rem;
+}
+
+.year {
+    color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none;
+        animation: none;
+    }
+}
